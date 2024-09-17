@@ -1,0 +1,151 @@
+this code is just for try 
+------------------------source code for one unite---------
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Ucalc.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+int i=0,na9s=0,kisma=0,drb=0,plus=0;
+ float r1=0;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn19Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '1';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '1';}
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn14Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '2';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '2';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn9Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '3';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '3';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn18Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '4';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '4';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn13Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '5';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '5';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn8Click(TObject *Sender)
+{
+ if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '6';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '6';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn17Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '7';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '7';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn12Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '8';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '8';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn7Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '9';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '9';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn2Click(TObject *Sender)
+{
+Memo1->Lines->Strings[1] = 'x';
+i=-1;
+drb=-1;
+na9s=0;
+kisma=0;
+plus=0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn3Click(TObject *Sender)
+{
+Memo1->Lines->Strings[1] ='+';
+i=-1;
+plus=-1;
+na9s=0;
+kisma=0;
+drb=0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn5Click(TObject *Sender)
+{
+Memo1->Lines->Strings[1] ='-';
+i=-1;
+na9s=-1;
+kisma=0;
+drb=0;
+plus=0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn1Click(TObject *Sender)
+{
+Memo1->Lines->Strings[1] ='/';
+i=-1;
+kisma=-1;
+na9s=0;
+drb=0;
+plus=0;
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn15Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '.';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '.';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn4Click(TObject *Sender)
+{
+if (drb==-1) {r1=(StrToFloat(Memo1->Lines->Strings[0]))*(StrToFloat(Memo1->Lines->Strings[2]));}
+if (plus==-1) {r1=(StrToFloat(Memo1->Lines->Strings[0]))+(StrToFloat(Memo1->Lines->Strings[2]));}
+if (na9s==-1) {r1=(StrToFloat(Memo1->Lines->Strings[0]))-(StrToFloat(Memo1->Lines->Strings[2]));}
+if (kisma==-1) {r1=(StrToFloat(Memo1->Lines->Strings[0]))/(StrToFloat(Memo1->Lines->Strings[2]));}
+Memo1->Lines->Strings[3] ='=';
+Memo1->Lines->Strings[3] = Memo1->Lines->Strings[3] + FloatToStr(r1);
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn20Click(TObject *Sender)
+{
+if (i==0) {Memo1->Lines->Strings[0] = Memo1->Lines->Strings[0] + '0';}
+if (i==-1){Memo1->Lines->Strings[2] = Memo1->Lines->Strings[2] + '0';}
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::BitBtn6Click(TObject *Sender)
+{
+Memo1->Lines->Strings[0] = "";
+Memo1->Lines->Strings[1] = "";
+Memo1->Lines->Strings[2] = "";
+Memo1->Lines->Strings[3] = "";
+i=0;
+kisma=0;
+na9s=0;
+drb=0;
+plus=0;
+}
+//---------------------------------------------------------------------------
