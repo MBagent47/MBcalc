@@ -1,6 +1,6 @@
-this is my calculator 
-i can't find a calculator in my windows
-so i make it
+<p>this is my calculator</p>
+<p>I can't find a calculator in my windows </p>
+<p>so i make it ...whay not</p>
 ---------------------------------------------
 --------------------------
 ![1](https://github.com/user-attachments/assets/5a34fc49-09a9-4eef-92d3-7187d127e9d1)
